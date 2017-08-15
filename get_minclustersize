@@ -1,0 +1,18 @@
+#-----TDf----
+grep "cluster" report_log.html 
+# /usr/local/fsl-5.0.8/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 2.3 -p 0.001 -d 0.0516269 --volume=233746 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z > cluster_zstat1_std.txt
+
+cluster -i thresh_zstat1 -c stats/cope1 -t 2.3 -p 0.001 -d 0.0516269 --volume=233746 --connectivity=26 --mm --scalarname=Z --minclustersize --no_table
+#Minimum cluster size under p-threshold = 784
+
+#-----TDm----
+cluster -i thresh_zstat1 -c stats/cope1 -t 2.3 -p 0.001 -d 0.0635697 --volume=225999 --connectivity=26 --mm --scalarname=Z --minclustersize --no_table
+#Minimum cluster size under p-threshold = 652
+
+#-----ASDf----
+cluster -i thresh_zstat1 -c stats/cope1 -t 2.3 -p 0.05 -d 0.055157 --volume=231413 --connectivity=26 --mm --scalarname=Z --minclustersize --no_table
+#Minimum cluster size under p-threshold = 739
+
+#-----ASDm----
+cluster -i thresh_zstat1 -c stats/cope1 -t 2.3 -p 0.001 -d 0.0645767 --volume=229265 --connectivity=26 --mm ---scalarname=Z --minclustersize --no_table
+#Minimum cluster size under p-threshold = 644
